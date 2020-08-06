@@ -17,7 +17,7 @@ def is_board_valid(board):
     not_empty = []
     for i in range(len(board)):
         for j in range(len(board[0])):
-            if not str(board[i][j]).isdigit():
+            if not str(board[i][j]).isdigit() or len(str(board[i][j])) != 1:
                 return False
             
             if board[i][j] != 0:
